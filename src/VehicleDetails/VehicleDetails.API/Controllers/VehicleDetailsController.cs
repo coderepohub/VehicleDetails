@@ -39,7 +39,7 @@ namespace VehicleDetails.API.Controllers
                 _logger.Log(LogLevel.Error, $"Vehicle Details query should have some data");
                 throw new HttpResponseException((int)HttpStatusCode.BadRequest, $"{nameof(vehicleDetailsQuery)} should not be empty.");
             }
-            var basicVehicleDetails = await _vehicleDetailsImplementation.GetBasicVehiclDetails(vehicleDetailsQuery);
+            var basicVehicleDetails = await _vehicleDetailsImplementation.GetBasicVehiclDetailsAsync(vehicleDetailsQuery);
             return Ok(new VehicleDetailsApiResponse<BasicVehicleDetail>
             {
                 Status = HttpStatus.Success.ToString(),

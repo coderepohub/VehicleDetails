@@ -9,6 +9,6 @@ namespace VehicleDetails.Contract
         /// </summary>
         /// <param name="vehicleDetailsQuery"></param>
         /// <returns></returns>
-        Task<IEnumerable<BasicVehicleDetail>> GetBasicVehiclDetails(VehicleDetailsQuery vehicleDetailsQuery);
+        Task<IEnumerable<BasicVehicleDetail>> GetBasicVehiclDetailsAsync(VehicleDetailsQuery vehicleDetailsQuery);
     }
 }

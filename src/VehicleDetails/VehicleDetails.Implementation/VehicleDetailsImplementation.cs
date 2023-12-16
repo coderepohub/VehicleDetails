@@ -24,7 +24,7 @@ namespace VehicleDetails.Implementation
         #endregion
 
         ///<inheritdoc/>
-        public async Task<IEnumerable<BasicVehicleDetail>> GetBasicVehiclDetails(VehicleDetailsQuery vehicleDetailsQuery)
+        public async Task<IEnumerable<BasicVehicleDetail>> GetBasicVehiclDetailsAsync(VehicleDetailsQuery vehicleDetailsQuery)
         {
             _logger.Log(LogLevel.Information, $"GetBasicVehiclDetails called with licenseplate: {vehicleDetailsQuery.Kenteken} and model: {vehicleDetailsQuery.Merk}");
             string key = $"{vehicleDetailsQuery.Kenteken}-{vehicleDetailsQuery.Merk}";
